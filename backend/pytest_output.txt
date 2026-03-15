@@ -1,0 +1,93 @@
+STDOUT:\n============================= test session starts =============================
+platform win32 -- Python 3.9.16, pytest-8.4.2, pluggy-1.6.0 -- D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend
+plugins: anyio-3.7.1, asyncio-1.2.0
+asyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 7 items
+
+tests/test_auth.py::TestAuthEndpoints::test_login_success ERROR          [ 14%]
+tests/test_auth.py::TestAuthEndpoints::test_login_invalid_password ERROR [ 28%]
+tests/test_auth.py::TestAuthEndpoints::test_login_nonexistent_user ERROR [ 42%]
+tests/test_auth.py::TestAuthEndpoints::test_login_invalid_email_format ERROR [ 57%]
+tests/test_auth.py::TestProtectedEndpoints::test_protected_endpoint_without_auth ERROR [ 71%]
+tests/test_auth.py::TestProtectedEndpoints::test_protected_endpoint_with_auth ERROR [ 85%]
+tests/test_auth.py::TestProtectedEndpoints::test_invalid_token ERROR     [100%]
+
+=================================== ERRORS ====================================
+___________ ERROR at setup of TestAuthEndpoints.test_login_success ____________
+.venv\lib\site-packages\pytest_asyncio\plugin.py:733: in pytest_fixture_setup
+    return (yield)
+tests\conftest.py:57: in client
+    with TestClient(app) as test_client:
+.venv\lib\site-packages\starlette\testclient.py:399: in __init__
+    super().__init__(
+E   TypeError: __init__() got an unexpected keyword argument 'app'
+_______ ERROR at setup of TestAuthEndpoints.test_login_invalid_password _______
+.venv\lib\site-packages\pytest_asyncio\plugin.py:733: in pytest_fixture_setup
+    return (yield)
+tests\conftest.py:57: in client
+    with TestClient(app) as test_client:
+.venv\lib\site-packages\starlette\testclient.py:399: in __init__
+    super().__init__(
+E   TypeError: __init__() got an unexpected keyword argument 'app'
+_______ ERROR at setup of TestAuthEndpoints.test_login_nonexistent_user _______
+.venv\lib\site-packages\pytest_asyncio\plugin.py:733: in pytest_fixture_setup
+    return (yield)
+tests\conftest.py:57: in client
+    with TestClient(app) as test_client:
+.venv\lib\site-packages\starlette\testclient.py:399: in __init__
+    super().__init__(
+E   TypeError: __init__() got an unexpected keyword argument 'app'
+_____ ERROR at setup of TestAuthEndpoints.test_login_invalid_email_format _____
+.venv\lib\site-packages\pytest_asyncio\plugin.py:733: in pytest_fixture_setup
+    return (yield)
+tests\conftest.py:57: in client
+    with TestClient(app) as test_client:
+.venv\lib\site-packages\starlette\testclient.py:399: in __init__
+    super().__init__(
+E   TypeError: __init__() got an unexpected keyword argument 'app'
+_ ERROR at setup of TestProtectedEndpoints.test_protected_endpoint_without_auth _
+.venv\lib\site-packages\pytest_asyncio\plugin.py:733: in pytest_fixture_setup
+    return (yield)
+tests\conftest.py:57: in client
+    with TestClient(app) as test_client:
+.venv\lib\site-packages\starlette\testclient.py:399: in __init__
+    super().__init__(
+E   TypeError: __init__() got an unexpected keyword argument 'app'
+_ ERROR at setup of TestProtectedEndpoints.test_protected_endpoint_with_auth __
+.venv\lib\site-packages\pytest_asyncio\plugin.py:733: in pytest_fixture_setup
+    return (yield)
+tests\conftest.py:57: in client
+    with TestClient(app) as test_client:
+.venv\lib\site-packages\starlette\testclient.py:399: in __init__
+    super().__init__(
+E   TypeError: __init__() got an unexpected keyword argument 'app'
+_________ ERROR at setup of TestProtectedEndpoints.test_invalid_token _________
+.venv\lib\site-packages\pytest_asyncio\plugin.py:733: in pytest_fixture_setup
+    return (yield)
+tests\conftest.py:57: in client
+    with TestClient(app) as test_client:
+.venv\lib\site-packages\starlette\testclient.py:399: in __init__
+    super().__init__(
+E   TypeError: __init__() got an unexpected keyword argument 'app'
+============================== warnings summary ===============================
+.venv\lib\site-packages\pydantic\_internal\_config.py:268: 11 warnings
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\.venv\lib\site-packages\pydantic\_internal\_config.py:268: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+app\database.py:19
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\database.py:19: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_auth.py::TestAuthEndpoints::test_login_success - TypeError: ...
+ERROR tests/test_auth.py::TestAuthEndpoints::test_login_invalid_password - Ty...
+ERROR tests/test_auth.py::TestAuthEndpoints::test_login_nonexistent_user - Ty...
+ERROR tests/test_auth.py::TestAuthEndpoints::test_login_invalid_email_format
+ERROR tests/test_auth.py::TestProtectedEndpoints::test_protected_endpoint_without_auth
+ERROR tests/test_auth.py::TestProtectedEndpoints::test_protected_endpoint_with_auth
+ERROR tests/test_auth.py::TestProtectedEndpoints::test_invalid_token - TypeEr...
+======================= 12 warnings, 7 errors in 1.14s ========================
+\nSTDERR:\n\nReturn code: 1

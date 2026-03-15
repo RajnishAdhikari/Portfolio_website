@@ -1,0 +1,310 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for Dark Mode */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+}
+
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus States - WCAG AA */
+*:focus-visible {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:ring-4 focus:ring-opacity-50;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-900 dark:text-white focus:ring-slate-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  /* Modal Backdrop */
+  .modal-backdrop {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center p-4;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    @apply bg-white dark:bg-slate-800 rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto;
+  }
+  
+  /* Loading Spinner */
+  .spinner {
+    @apply inline-block w-8 h-8 border-4 border-t-primary-600 border-r-transparent border-b-primary-600 border-l-transparent rounded-full animate-spin;
+  }
+  
+  /* Card Grid */
+  .card-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+  }
+  
+  /* Glassmorphism */
+  .glass {
+    @apply backdrop-blur-md bg-white/10 dark:bg-slate-900/10 border border-white/20;
+  }
+}
+
+/* TipTap Editor Styles */
+.ProseMirror {
+  @apply w-full min-h-[200px] p-4 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none;
+}
+
+.ProseMirror p {
+  @apply mb-4;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3 {
+  @apply font-bold mb-4 mt-6;
+}
+
+.ProseMirror h1 {
+  @apply text-3xl;
+}
+
+.ProseMirror h2 {
+  @apply text-2xl;
+}
+
+.ProseMirror h3 {
+  @apply text-xl;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  @apply pl-6 mb-4;
+}
+
+.ProseMirror ul {
+  @apply list-disc;
+}
+
+.ProseMirror ol {
+  @apply list-decimal;
+}
+
+.ProseMirror code {
+  @apply bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm font-mono;
+}
+
+.ProseMirror pre {
+  @apply bg-slate-100 dark:bg-slate-800 p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.ProseMirror blockquote {
+  @apply border-l-4 border-primary-500 pl-4 italic mb-4;
+}
+
+.ProseMirror img {
+  @apply max-w-full h-auto rounded-lg my-4;
+}
+
+.ProseMirror a {
+  @apply text-primary-600 hover:underline;
+}
+
+/* Hero Section Gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.dark .hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 0.8s ease-in 0.2s both;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

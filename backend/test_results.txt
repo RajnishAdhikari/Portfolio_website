@@ -1,0 +1,1083 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.9.16, pytest-7.1.2, pluggy-1.0.0 -- C:\Users\PC\anaconda\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend
+plugins: anyio-3.7.1
+collecting ... collected 140 items
+
+tests/test_article_api.py::TestArticleEndpoints::test_list_articles_empty FAILED [  0%]
+tests/test_article_api.py::TestArticleEndpoints::test_create_article_success FAILED [  1%]
+tests/test_article_api.py::TestArticleEndpoints::test_create_featured_article FAILED [  2%]
+tests/test_article_api.py::TestArticleEndpoints::test_create_article_duplicate_slug FAILED [  2%]
+tests/test_article_api.py::TestArticleEndpoints::test_create_article_without_auth FAILED [  3%]
+tests/test_article_api.py::TestArticleEndpoints::test_create_article_missing_required_fields FAILED [  4%]
+tests/test_article_api.py::TestArticleEndpoints::test_get_article_by_slug FAILED [  5%]
+tests/test_article_api.py::TestArticleEndpoints::test_get_article_by_slug_not_found PASSED [  5%]
+tests/test_article_api.py::TestArticleEndpoints::test_list_articles_multiple FAILED [  6%]
+tests/test_article_api.py::TestArticleEndpoints::test_list_featured_articles_only FAILED [  7%]
+tests/test_article_api.py::TestArticleEndpoints::test_update_article_success FAILED [  7%]
+tests/test_article_api.py::TestArticleEndpoints::test_update_article_toggle_featured FAILED [  8%]
+tests/test_article_api.py::TestArticleEndpoints::test_update_article_not_found PASSED [  9%]
+tests/test_article_api.py::TestArticleEndpoints::test_delete_article_success FAILED [ 10%]
+tests/test_article_api.py::TestArticleEndpoints::test_upload_cover_image FAILED [ 10%]
+tests/test_article_api.py::TestArticleEndpoints::test_upload_pdf_attachment FAILED [ 11%]
+tests/test_auth.py::TestAuthEndpoints::test_login_success PASSED         [ 12%]
+tests/test_auth.py::TestAuthEndpoints::test_login_invalid_password PASSED [ 12%]
+tests/test_auth.py::TestAuthEndpoints::test_login_nonexistent_user PASSED [ 13%]
+tests/test_auth.py::TestAuthEndpoints::test_login_invalid_email_format PASSED [ 14%]
+tests/test_auth.py::TestProtectedEndpoints::test_protected_endpoint_without_auth FAILED [ 15%]
+tests/test_auth.py::TestProtectedEndpoints::test_protected_endpoint_with_auth PASSED [ 15%]
+tests/test_auth.py::TestProtectedEndpoints::test_invalid_token PASSED    [ 16%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_list_certifications_empty FAILED [ 17%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_create_certification_success FAILED [ 17%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_create_certification_minimal FAILED [ 18%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_create_certification_without_auth FAILED [ 19%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_create_certification_missing_required_fields FAILED [ 20%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_list_certifications_multiple FAILED [ 20%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_update_certification_success FAILED [ 21%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_update_certification_not_found PASSED [ 22%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_update_certification_without_auth FAILED [ 22%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_delete_certification_success FAILED [ 23%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_delete_certification_not_found PASSED [ 24%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_delete_certification_without_auth FAILED [ 25%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_upload_certificate_image FAILED [ 25%]
+tests/test_certification_api.py::TestCertificationEndpoints::test_certification_date_format FAILED [ 26%]
+tests/test_education_api.py::TestEducationEndpoints::test_list_education_empty PASSED [ 27%]
+tests/test_education_api.py::TestEducationEndpoints::test_create_education PASSED [ 27%]
+tests/test_education_api.py::TestEducationEndpoints::test_create_education_minimal PASSED [ 28%]
+tests/test_education_api.py::TestEducationEndpoints::test_create_education_unauthorized FAILED [ 29%]
+tests/test_education_api.py::TestEducationEndpoints::test_update_education PASSED [ 30%]
+tests/test_education_api.py::TestEducationEndpoints::test_update_education_not_found PASSED [ 30%]
+tests/test_education_api.py::TestEducationEndpoints::test_delete_education PASSED [ 31%]
+tests/test_education_api.py::TestEducationEndpoints::test_delete_education_not_found PASSED [ 32%]
+tests/test_education_api.py::TestEducationEndpoints::test_list_education_after_create PASSED [ 32%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_list_experiences_empty PASSED [ 33%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_create_experience_success PASSED [ 34%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_create_experience_current_position PASSED [ 35%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_create_experience_without_auth FAILED [ 35%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_create_experience_missing_required_fields PASSED [ 36%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_list_experiences_multiple PASSED [ 37%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_update_experience_success PASSED [ 37%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_update_experience_not_found PASSED [ 38%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_update_experience_without_auth FAILED [ 39%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_delete_experience_success PASSED [ 40%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_delete_experience_not_found PASSED [ 40%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_delete_experience_without_auth FAILED [ 41%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_upload_logo_success FAILED [ 42%]
+tests/test_experience_api.py::TestExperienceEndpoints::test_upload_logo_experience_not_found PASSED [ 42%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_list_extracurriculars_empty PASSED [ 43%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_success PASSED [ 44%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_minimal PASSED [ 45%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_ongoing PASSED [ 45%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_without_auth FAILED [ 46%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_missing_title PASSED [ 47%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_list_extracurriculars_multiple PASSED [ 47%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_update_extracurricular_success PASSED [ 48%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_update_extracurricular_not_found PASSED [ 49%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_update_extracurricular_without_auth FAILED [ 50%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_delete_extracurricular_success PASSED [ 50%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_delete_extracurricular_not_found PASSED [ 51%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_delete_extracurricular_without_auth FAILED [ 52%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_upload_certificate_image FAILED [ 52%]
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_extracurricular_with_external_url PASSED [ 53%]
+tests/test_models.py::TestUserModel::test_create_user PASSED             [ 54%]
+tests/test_models.py::TestUserModel::test_create_admin_user PASSED       [ 55%]
+tests/test_models.py::TestUserModel::test_user_unique_email PASSED       [ 55%]
+tests/test_models.py::TestPersonalModel::test_create_personal_info PASSED [ 56%]
+tests/test_models.py::TestPersonalModel::test_personal_optional_fields PASSED [ 57%]
+tests/test_models.py::TestEducationModel::test_create_education PASSED   [ 57%]
+tests/test_models.py::TestEducationModel::test_education_soft_delete PASSED [ 58%]
+tests/test_models.py::TestExperienceModel::test_create_experience PASSED [ 59%]
+tests/test_models.py::TestSkillModel::test_create_skill PASSED           [ 60%]
+tests/test_models.py::TestProjectModel::test_create_project PASSED       [ 60%]
+tests/test_models.py::TestBaseModelFields::test_uuid_generation PASSED   [ 61%]
+tests/test_models.py::TestBaseModelFields::test_timestamp_fields PASSED  [ 62%]
+tests/test_personal_api.py::TestPersonalEndpoints::test_get_personal_info_empty PASSED [ 62%]
+tests/test_personal_api.py::TestPersonalEndpoints::test_get_personal_info_with_data PASSED [ 63%]
+tests/test_personal_api.py::TestPersonalEndpoints::test_update_personal_info FAILED [ 64%]
+tests/test_personal_api.py::TestPersonalEndpoints::test_update_personal_info_unauthorized FAILED [ 65%]
+tests/test_personal_api.py::TestPersonalEndpoints::test_update_personal_partial PASSED [ 65%]
+tests/test_personal_api.py::TestPersonalInfoValidation::test_update_with_valid_urls FAILED [ 66%]
+tests/test_project_api.py::TestProjectEndpoints::test_list_projects_empty FAILED [ 67%]
+tests/test_project_api.py::TestProjectEndpoints::test_create_project_success FAILED [ 67%]
+tests/test_project_api.py::TestProjectEndpoints::test_create_project_minimal FAILED [ 68%]
+tests/test_project_api.py::TestProjectEndpoints::test_create_project_duplicate_slug FAILED [ 69%]
+tests/test_project_api.py::TestProjectEndpoints::test_create_project_without_auth FAILED [ 70%]
+tests/test_project_api.py::TestProjectEndpoints::test_create_project_missing_required_fields FAILED [ 70%]
+tests/test_project_api.py::TestProjectEndpoints::test_get_project_by_slug FAILED [ 71%]
+tests/test_project_api.py::TestProjectEndpoints::test_get_project_by_slug_not_found PASSED [ 72%]
+tests/test_project_api.py::TestProjectEndpoints::test_list_projects_multiple FAILED [ 72%]
+tests/test_project_api.py::TestProjectEndpoints::test_update_project_success FAILED [ 73%]
+tests/test_project_api.py::TestProjectEndpoints::test_update_project_slug FAILED [ 74%]
+tests/test_project_api.py::TestProjectEndpoints::test_update_project_not_found PASSED [ 75%]
+tests/test_project_api.py::TestProjectEndpoints::test_delete_project_success FAILED [ 75%]
+tests/test_project_api.py::TestProjectEndpoints::test_upload_cover_image_success FAILED [ 76%]
+tests/test_project_api.py::TestProjectEndpoints::test_upload_project_images FAILED [ 77%]
+tests/test_project_api.py::TestProjectEndpoints::test_project_with_images_array FAILED [ 77%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_list_resource_papers_empty FAILED [ 78%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_resource_paper_success FAILED [ 79%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_featured_resource_paper FAILED [ 80%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_resource_paper_duplicate_slug FAILED [ 80%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_resource_paper_without_auth FAILED [ 81%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_resource_paper_missing_required_fields FAILED [ 82%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_get_resource_paper_by_slug FAILED [ 82%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_get_resource_paper_by_slug_not_found PASSED [ 83%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_list_resource_papers_multiple FAILED [ 84%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_list_featured_resource_papers FAILED [ 85%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_update_resource_paper_success FAILED [ 85%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_update_resource_paper_toggle_featured FAILED [ 86%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_update_resource_paper_not_found PASSED [ 87%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_delete_resource_paper_success FAILED [ 87%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_upload_cover_image FAILED [ 88%]
+tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_upload_pdf_attachment FAILED [ 89%]
+tests/test_skill_api.py::TestSkillEndpoints::test_list_skills_empty FAILED [ 90%]
+tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_success FAILED [ 90%]
+tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_all_categories FAILED [ 91%]
+tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_invalid_level FAILED [ 92%]
+tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_without_auth FAILED [ 92%]
+tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_missing_required_fields FAILED [ 93%]
+tests/test_skill_api.py::TestSkillEndpoints::test_list_skills_grouped_by_category FAILED [ 94%]
+tests/test_skill_api.py::TestSkillEndpoints::test_update_skill_success FAILED [ 95%]
+tests/test_skill_api.py::TestSkillEndpoints::test_update_skill_change_category FAILED [ 95%]
+tests/test_skill_api.py::TestSkillEndpoints::test_update_skill_not_found PASSED [ 96%]
+tests/test_skill_api.py::TestSkillEndpoints::test_update_skill_without_auth FAILED [ 97%]
+tests/test_skill_api.py::TestSkillEndpoints::test_delete_skill_success FAILED [ 97%]
+tests/test_skill_api.py::TestSkillEndpoints::test_delete_skill_not_found PASSED [ 98%]
+tests/test_skill_api.py::TestSkillEndpoints::test_delete_skill_without_auth FAILED [ 99%]
+tests/test_skill_api.py::TestSkillEndpoints::test_skills_ordered_by_level FAILED [100%]
+
+================================== FAILURES ===================================
+________________ TestArticleEndpoints.test_list_articles_empty ________________
+tests\test_article_api.py:20: in test_list_articles_empty
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestArticleEndpoints.test_create_article_success _______________
+tests\test_article_api.py:43: in test_create_article_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestArticleEndpoints.test_create_featured_article ______________
+tests\test_article_api.py:72: in test_create_featured_article
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+___________ TestArticleEndpoints.test_create_article_duplicate_slug ___________
+tests\test_article_api.py:97: in test_create_article_duplicate_slug
+    assert response.status_code in [400, 409, 500]
+E   assert 404 in [400, 409, 500]
+E    +  where 404 = <Response [404 Not Found]>.status_code
+____________ TestArticleEndpoints.test_create_article_without_auth ____________
+tests\test_article_api.py:110: in test_create_article_without_auth
+    assert response.status_code == 401
+E   assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______ TestArticleEndpoints.test_create_article_missing_required_fields _______
+tests\test_article_api.py:122: in test_create_article_missing_required_fields
+    assert response.status_code == 422
+E   assert 404 == 422
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________________ TestArticleEndpoints.test_get_article_by_slug ________________
+tests\test_article_api.py:139: in test_get_article_by_slug
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestArticleEndpoints.test_list_articles_multiple _______________
+tests\test_article_api.py:166: in test_list_articles_multiple
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+____________ TestArticleEndpoints.test_list_featured_articles_only ____________
+tests\test_article_api.py:189: in test_list_featured_articles_only
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestArticleEndpoints.test_update_article_success _______________
+tests\test_article_api.py:219: in test_update_article_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+__________ TestArticleEndpoints.test_update_article_toggle_featured ___________
+tests\test_article_api.py:245: in test_update_article_toggle_featured
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestArticleEndpoints.test_delete_article_success _______________
+tests\test_article_api.py:278: in test_delete_article_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________________ TestArticleEndpoints.test_upload_cover_image _________________
+tests\test_article_api.py:312: in test_upload_cover_image
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_______________ TestArticleEndpoints.test_upload_pdf_attachment _______________
+tests\test_article_api.py:340: in test_upload_pdf_attachment
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_________ TestProtectedEndpoints.test_protected_endpoint_without_auth _________
+tests\test_auth.py:85: in test_protected_endpoint_without_auth
+    assert response.status_code == 401
+E   assert 403 == 401
+E    +  where 403 = <Response [403 Forbidden]>.status_code
+__________ TestCertificationEndpoints.test_list_certifications_empty __________
+tests\test_certification_api.py:20: in test_list_certifications_empty
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestCertificationEndpoints.test_create_certification_success _________
+tests\test_certification_api.py:44: in test_create_certification_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestCertificationEndpoints.test_create_certification_minimal _________
+tests\test_certification_api.py:72: in test_create_certification_minimal
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______ TestCertificationEndpoints.test_create_certification_without_auth ______
+tests\test_certification_api.py:86: in test_create_certification_without_auth
+    assert response.status_code == 401
+E   assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_ TestCertificationEndpoints.test_create_certification_missing_required_fields _
+tests\test_certification_api.py:98: in test_create_certification_missing_required_fields
+    assert response.status_code == 422
+E   assert 404 == 422
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestCertificationEndpoints.test_list_certifications_multiple _________
+tests\test_certification_api.py:128: in test_list_certifications_multiple
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestCertificationEndpoints.test_update_certification_success _________
+tests\test_certification_api.py:157: in test_update_certification_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______ TestCertificationEndpoints.test_update_certification_without_auth ______
+tests\test_certification_api.py:193: in test_update_certification_without_auth
+    assert response.status_code == 401
+E   assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestCertificationEndpoints.test_delete_certification_success _________
+tests\test_certification_api.py:213: in test_delete_certification_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______ TestCertificationEndpoints.test_delete_certification_without_auth ______
+tests\test_certification_api.py:249: in test_delete_certification_without_auth
+    assert response.status_code == 401
+E   assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+__________ TestCertificationEndpoints.test_upload_certificate_image ___________
+tests\test_certification_api.py:275: in test_upload_certificate_image
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+__________ TestCertificationEndpoints.test_certification_date_format __________
+tests\test_certification_api.py:295: in test_certification_date_format
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+__________ TestEducationEndpoints.test_create_education_unauthorized __________
+tests\test_education_api.py:79: in test_create_education_unauthorized
+    assert response.status_code == 401
+E   assert 403 == 401
+E    +  where 403 = <Response [403 Forbidden]>.status_code
+_________ TestExperienceEndpoints.test_create_experience_without_auth _________
+tests\test_experience_api.py:89: in test_create_experience_without_auth
+    assert response.status_code == 401
+E   assert 403 == 401
+E    +  where 403 = <Response [403 Forbidden]>.status_code
+_________ TestExperienceEndpoints.test_update_experience_without_auth _________
+tests\test_experience_api.py:200: in test_update_experience_without_auth
+    assert response.status_code == 401
+E   assert 403 == 401
+E    +  where 403 = <Response [403 Forbidden]>.status_code
+_________ TestExperienceEndpoints.test_delete_experience_without_auth _________
+tests\test_experience_api.py:256: in test_delete_experience_without_auth
+    assert response.status_code == 401
+E   assert 403 == 401
+E    +  where 403 = <Response [403 Forbidden]>.status_code
+______________ TestExperienceEndpoints.test_upload_logo_success _______________
+tests\test_experience_api.py:284: in test_upload_logo_success
+    assert response.status_code == 200
+E   assert 400 == 200
+E    +  where 400 = <Response [400 Bad Request]>.status_code
+---------------------------- Captured stdout call -----------------------------
+[DEBUG] Token decoded payload: {'sub': '3a73c9c9-48ce-4d11-8260-a38039bd6076', 'role': 'admin', 'exp': 1769447684, 'type': 'access'}
+[DEBUG] User ID from token: 3a73c9c9-48ce-4d11-8260-a38039bd6076, type: <class 'str'>
+[DEBUG] Querying database for user_id: 3a73c9c9-48ce-4d11-8260-a38039bd6076
+[DEBUG] Query result: <app.models.user.User object at 0x000002192A46C7F0>
+[DEBUG] User found: testadmin@example.com
+____ TestExtracurricularEndpoints.test_create_extracurricular_without_auth ____
+tests\test_extracurricular_api.py:100: in test_create_extracurricular_without_auth
+    assert response.status_code == 401
+E   assert 403 == 401
+E    +  where 403 = <Response [403 Forbidden]>.status_code
+____ TestExtracurricularEndpoints.test_update_extracurricular_without_auth ____
+tests\test_extracurricular_api.py:200: in test_update_extracurricular_without_auth
+    assert response.status_code == 401
+E   assert 403 == 401
+E    +  where 403 = <Response [403 Forbidden]>.status_code
+____ TestExtracurricularEndpoints.test_delete_extracurricular_without_auth ____
+tests\test_extracurricular_api.py:248: in test_delete_extracurricular_without_auth
+    assert response.status_code == 401
+E   assert 403 == 401
+E    +  where 403 = <Response [403 Forbidden]>.status_code
+_________ TestExtracurricularEndpoints.test_upload_certificate_image __________
+tests\test_extracurricular_api.py:270: in test_upload_certificate_image
+    assert response.status_code == 200
+E   assert 400 == 200
+E    +  where 400 = <Response [400 Bad Request]>.status_code
+---------------------------- Captured stdout call -----------------------------
+[DEBUG] Token decoded payload: {'sub': '8e709210-0c29-44f3-addb-6b4a71a87be9', 'role': 'admin', 'exp': 1769447687, 'type': 'access'}
+[DEBUG] User ID from token: 8e709210-0c29-44f3-addb-6b4a71a87be9, type: <class 'str'>
+[DEBUG] Querying database for user_id: 8e709210-0c29-44f3-addb-6b4a71a87be9
+[DEBUG] Query result: <app.models.user.User object at 0x000002192A487EB0>
+[DEBUG] User found: testadmin@example.com
+_______________ TestPersonalEndpoints.test_update_personal_info _______________
+C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py:98: in receive
+    return self.receive_nowait()
+C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py:93: in receive_nowait
+    raise WouldBlock
+E   anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py:78: in call_next
+    message = await recv_stream.receive()
+C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py:118: in receive
+    raise EndOfStream
+E   anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+tests\test_personal_api.py:53: in test_update_personal_info
+    response = client.patch(
+C:\Users\PC\anaconda\lib\site-packages\starlette\testclient.py:664: in patch
+    return super().patch(
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:1220: in patch
+    return self.request(
+C:\Users\PC\anaconda\lib\site-packages\starlette\testclient.py:465: in request
+    return super().request(
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:828: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:915: in send
+    response = self._send_handling_auth(
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:943: in _send_handling_auth
+    response = self._send_handling_redirects(
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:980: in _send_handling_redirects
+    response = self._send_single_request(request)
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:1016: in _send_single_request
+    response = transport.handle_request(request)
+C:\Users\PC\anaconda\lib\site-packages\starlette\testclient.py:342: in handle_request
+    raise exc
+C:\Users\PC\anaconda\lib\site-packages\starlette\testclient.py:339: in handle_request
+    portal.call(self.app, scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\anyio\from_thread.py:277: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+C:\Users\PC\anaconda\lib\concurrent\futures\_base.py:446: in result
+    return self.__get_result()
+C:\Users\PC\anaconda\lib\concurrent\futures\_base.py:391: in __get_result
+    raise self._exception
+C:\Users\PC\anaconda\lib\site-packages\anyio\from_thread.py:217: in _call_func
+    retval = await retval
+C:\Users\PC\anaconda\lib\site-packages\fastapi\applications.py:1106: in __call__
+    await super().__call__(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\applications.py:122: in __call__
+    await self.middleware_stack(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py:108: in __call__
+    response = await self.dispatch_func(request, call_next)
+app\main.py:34: in add_cors_headers_backup
+    response = await call_next(request)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py:84: in call_next
+    raise app_exc
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py:70: in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\cors.py:83: in __call__
+    await self.app(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\exceptions.py:79: in __call__
+    raise exc
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\exceptions.py:68: in __call__
+    await self.app(scope, receive, sender)
+C:\Users\PC\anaconda\lib\site-packages\fastapi\middleware\asyncexitstack.py:20: in __call__
+    raise e
+C:\Users\PC\anaconda\lib\site-packages\fastapi\middleware\asyncexitstack.py:17: in __call__
+    await self.app(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py:718: in __call__
+    await route.handle(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py:276: in handle
+    await self.app(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py:66: in app
+    response = await func(request)
+C:\Users\PC\anaconda\lib\site-packages\fastapi\routing.py:274: in app
+    raw_response = await run_endpoint_function(
+C:\Users\PC\anaconda\lib\site-packages\fastapi\routing.py:191: in run_endpoint_function
+    return await dependant.call(**values)
+app\api\v1\personal.py:87: in update_personal_info
+    data=PersonalResponse.from_orm(personal)
+C:\Users\PC\anaconda\lib\site-packages\typing_extensions.py:3004: in wrapper
+    return arg(*args, **kwargs)
+C:\Users\PC\anaconda\lib\site-packages\pydantic\main.py:1129: in from_orm
+    return cls.model_validate(obj)
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for PersonalResponse
+E   email
+E     Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+E       For further information visit https://errors.pydantic.dev/2.5/v/string_type
+---------------------------- Captured stdout call -----------------------------
+[DEBUG] Token decoded payload: {'sub': '1014e7e8-67b4-4b15-99b1-3b626dc6377a', 'role': 'admin', 'exp': 1769447688, 'type': 'access'}
+[DEBUG] User ID from token: 1014e7e8-67b4-4b15-99b1-3b626dc6377a, type: <class 'str'>
+[DEBUG] Querying database for user_id: 1014e7e8-67b4-4b15-99b1-3b626dc6377a
+[DEBUG] Query result: <app.models.user.User object at 0x000002192A5C90A0>
+[DEBUG] User found: testadmin@example.com
+================================================================================
+ERROR IN REQUEST:
+Path: /api/v1/personal
+Method: PATCH
+Error: 1 validation error for PersonalResponse
+email
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/string_type
+Traceback:
+================================================================================
+---------------------------- Captured stderr call -----------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py", line 98, in receive
+    return self.receive_nowait()
+  File "C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py", line 93, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py", line 78, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py", line 118, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\main.py", line 34, in add_cors_headers_backup
+    response = await call_next(request)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py", line 84, in call_next
+    raise app_exc
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py", line 70, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\PC\anaconda\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\PC\anaconda\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+  File "C:\Users\PC\anaconda\lib\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\PC\anaconda\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\personal.py", line 87, in update_personal_info
+    data=PersonalResponse.from_orm(personal)
+  File "C:\Users\PC\anaconda\lib\site-packages\typing_extensions.py", line 3004, in wrapper
+    return arg(*args, **kwargs)
+  File "C:\Users\PC\anaconda\lib\site-packages\pydantic\main.py", line 1129, in from_orm
+    return cls.model_validate(obj)
+  File "C:\Users\PC\anaconda\lib\site-packages\pydantic\main.py", line 503, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PersonalResponse
+email
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/string_type
+________ TestPersonalEndpoints.test_update_personal_info_unauthorized _________
+tests\test_personal_api.py:76: in test_update_personal_info_unauthorized
+    assert response.status_code == 401
+E   assert 403 == 401
+E    +  where 403 = <Response [403 Forbidden]>.status_code
+___________ TestPersonalInfoValidation.test_update_with_valid_urls ____________
+C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py:98: in receive
+    return self.receive_nowait()
+C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py:93: in receive_nowait
+    raise WouldBlock
+E   anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py:78: in call_next
+    message = await recv_stream.receive()
+C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py:118: in receive
+    raise EndOfStream
+E   anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+tests\test_personal_api.py:117: in test_update_with_valid_urls
+    response = client.patch(
+C:\Users\PC\anaconda\lib\site-packages\starlette\testclient.py:664: in patch
+    return super().patch(
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:1220: in patch
+    return self.request(
+C:\Users\PC\anaconda\lib\site-packages\starlette\testclient.py:465: in request
+    return super().request(
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:828: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:915: in send
+    response = self._send_handling_auth(
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:943: in _send_handling_auth
+    response = self._send_handling_redirects(
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:980: in _send_handling_redirects
+    response = self._send_single_request(request)
+C:\Users\PC\anaconda\lib\site-packages\httpx\_client.py:1016: in _send_single_request
+    response = transport.handle_request(request)
+C:\Users\PC\anaconda\lib\site-packages\starlette\testclient.py:342: in handle_request
+    raise exc
+C:\Users\PC\anaconda\lib\site-packages\starlette\testclient.py:339: in handle_request
+    portal.call(self.app, scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\anyio\from_thread.py:277: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+C:\Users\PC\anaconda\lib\concurrent\futures\_base.py:446: in result
+    return self.__get_result()
+C:\Users\PC\anaconda\lib\concurrent\futures\_base.py:391: in __get_result
+    raise self._exception
+C:\Users\PC\anaconda\lib\site-packages\anyio\from_thread.py:217: in _call_func
+    retval = await retval
+C:\Users\PC\anaconda\lib\site-packages\fastapi\applications.py:1106: in __call__
+    await super().__call__(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\applications.py:122: in __call__
+    await self.middleware_stack(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py:108: in __call__
+    response = await self.dispatch_func(request, call_next)
+app\main.py:34: in add_cors_headers_backup
+    response = await call_next(request)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py:84: in call_next
+    raise app_exc
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py:70: in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\cors.py:83: in __call__
+    await self.app(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\exceptions.py:79: in __call__
+    raise exc
+C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\exceptions.py:68: in __call__
+    await self.app(scope, receive, sender)
+C:\Users\PC\anaconda\lib\site-packages\fastapi\middleware\asyncexitstack.py:20: in __call__
+    raise e
+C:\Users\PC\anaconda\lib\site-packages\fastapi\middleware\asyncexitstack.py:17: in __call__
+    await self.app(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py:718: in __call__
+    await route.handle(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py:276: in handle
+    await self.app(scope, receive, send)
+C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py:66: in app
+    response = await func(request)
+C:\Users\PC\anaconda\lib\site-packages\fastapi\routing.py:274: in app
+    raw_response = await run_endpoint_function(
+C:\Users\PC\anaconda\lib\site-packages\fastapi\routing.py:191: in run_endpoint_function
+    return await dependant.call(**values)
+app\api\v1\personal.py:87: in update_personal_info
+    data=PersonalResponse.from_orm(personal)
+C:\Users\PC\anaconda\lib\site-packages\typing_extensions.py:3004: in wrapper
+    return arg(*args, **kwargs)
+C:\Users\PC\anaconda\lib\site-packages\pydantic\main.py:1129: in from_orm
+    return cls.model_validate(obj)
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for PersonalResponse
+E   email
+E     Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+E       For further information visit https://errors.pydantic.dev/2.5/v/string_type
+---------------------------- Captured stdout call -----------------------------
+[DEBUG] Token decoded payload: {'sub': '50ad7db9-fe40-4a32-8360-566b09b2f02f', 'role': 'admin', 'exp': 1769447689, 'type': 'access'}
+[DEBUG] User ID from token: 50ad7db9-fe40-4a32-8360-566b09b2f02f, type: <class 'str'>
+[DEBUG] Querying database for user_id: 50ad7db9-fe40-4a32-8360-566b09b2f02f
+[DEBUG] Query result: <app.models.user.User object at 0x000002192A23ABE0>
+[DEBUG] User found: testadmin@example.com
+================================================================================
+ERROR IN REQUEST:
+Path: /api/v1/personal
+Method: PATCH
+Error: 1 validation error for PersonalResponse
+email
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/string_type
+Traceback:
+================================================================================
+---------------------------- Captured stderr call -----------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py", line 98, in receive
+    return self.receive_nowait()
+  File "C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py", line 93, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py", line 78, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\PC\anaconda\lib\site-packages\anyio\streams\memory.py", line 118, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\main.py", line 34, in add_cors_headers_backup
+    response = await call_next(request)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py", line 84, in call_next
+    raise app_exc
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\base.py", line 70, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\PC\anaconda\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\PC\anaconda\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PC\anaconda\lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+  File "C:\Users\PC\anaconda\lib\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\PC\anaconda\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\personal.py", line 87, in update_personal_info
+    data=PersonalResponse.from_orm(personal)
+  File "C:\Users\PC\anaconda\lib\site-packages\typing_extensions.py", line 3004, in wrapper
+    return arg(*args, **kwargs)
+  File "C:\Users\PC\anaconda\lib\site-packages\pydantic\main.py", line 1129, in from_orm
+    return cls.model_validate(obj)
+  File "C:\Users\PC\anaconda\lib\site-packages\pydantic\main.py", line 503, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PersonalResponse
+email
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/string_type
+________________ TestProjectEndpoints.test_list_projects_empty ________________
+tests\test_project_api.py:20: in test_list_projects_empty
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestProjectEndpoints.test_create_project_success _______________
+tests\test_project_api.py:45: in test_create_project_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestProjectEndpoints.test_create_project_minimal _______________
+tests\test_project_api.py:73: in test_create_project_minimal
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+___________ TestProjectEndpoints.test_create_project_duplicate_slug ___________
+tests\test_project_api.py:101: in test_create_project_duplicate_slug
+    assert response.status_code in [400, 409, 500]  # Various ways to handle duplicate
+E   assert 404 in [400, 409, 500]
+E    +  where 404 = <Response [404 Not Found]>.status_code
+____________ TestProjectEndpoints.test_create_project_without_auth ____________
+tests\test_project_api.py:114: in test_create_project_without_auth
+    assert response.status_code == 401
+E   assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______ TestProjectEndpoints.test_create_project_missing_required_fields _______
+tests\test_project_api.py:126: in test_create_project_missing_required_fields
+    assert response.status_code == 422
+E   assert 404 == 422
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________________ TestProjectEndpoints.test_get_project_by_slug ________________
+tests\test_project_api.py:143: in test_get_project_by_slug
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestProjectEndpoints.test_list_projects_multiple _______________
+tests\test_project_api.py:170: in test_list_projects_multiple
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestProjectEndpoints.test_update_project_success _______________
+tests\test_project_api.py:199: in test_update_project_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________________ TestProjectEndpoints.test_update_project_slug ________________
+tests\test_project_api.py:224: in test_update_project_slug
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestProjectEndpoints.test_delete_project_success _______________
+tests\test_project_api.py:257: in test_delete_project_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+____________ TestProjectEndpoints.test_upload_cover_image_success _____________
+tests\test_project_api.py:291: in test_upload_cover_image_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_______________ TestProjectEndpoints.test_upload_project_images _______________
+tests\test_project_api.py:320: in test_upload_project_images
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_____________ TestProjectEndpoints.test_project_with_images_array _____________
+tests\test_project_api.py:339: in test_project_with_images_array
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_________ TestResourcePaperEndpoints.test_list_resource_papers_empty __________
+tests\test_resource_paper_api.py:20: in test_list_resource_papers_empty
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestResourcePaperEndpoints.test_create_resource_paper_success ________
+tests\test_resource_paper_api.py:43: in test_create_resource_paper_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_______ TestResourcePaperEndpoints.test_create_featured_resource_paper ________
+tests\test_resource_paper_api.py:72: in test_create_featured_resource_paper
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+____ TestResourcePaperEndpoints.test_create_resource_paper_duplicate_slug _____
+tests\test_resource_paper_api.py:97: in test_create_resource_paper_duplicate_slug
+    assert response.status_code in [400, 409, 500]
+E   assert 404 in [400, 409, 500]
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_____ TestResourcePaperEndpoints.test_create_resource_paper_without_auth ______
+tests\test_resource_paper_api.py:110: in test_create_resource_paper_without_auth
+    assert response.status_code == 401
+E   assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_ TestResourcePaperEndpoints.test_create_resource_paper_missing_required_fields _
+tests\test_resource_paper_api.py:122: in test_create_resource_paper_missing_required_fields
+    assert response.status_code == 422
+E   assert 404 == 422
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_________ TestResourcePaperEndpoints.test_get_resource_paper_by_slug __________
+tests\test_resource_paper_api.py:139: in test_get_resource_paper_by_slug
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestResourcePaperEndpoints.test_list_resource_papers_multiple ________
+tests\test_resource_paper_api.py:166: in test_list_resource_papers_multiple
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestResourcePaperEndpoints.test_list_featured_resource_papers ________
+tests\test_resource_paper_api.py:187: in test_list_featured_resource_papers
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestResourcePaperEndpoints.test_update_resource_paper_success ________
+tests\test_resource_paper_api.py:216: in test_update_resource_paper_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+____ TestResourcePaperEndpoints.test_update_resource_paper_toggle_featured ____
+tests\test_resource_paper_api.py:241: in test_update_resource_paper_toggle_featured
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestResourcePaperEndpoints.test_delete_resource_paper_success ________
+tests\test_resource_paper_api.py:274: in test_delete_resource_paper_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_____________ TestResourcePaperEndpoints.test_upload_cover_image ______________
+tests\test_resource_paper_api.py:308: in test_upload_cover_image
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+____________ TestResourcePaperEndpoints.test_upload_pdf_attachment ____________
+tests\test_resource_paper_api.py:336: in test_upload_pdf_attachment
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+__________________ TestSkillEndpoints.test_list_skills_empty __________________
+tests\test_skill_api.py:19: in test_list_skills_empty
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________________ TestSkillEndpoints.test_create_skill_success _________________
+tests\test_skill_api.py:40: in test_create_skill_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_____________ TestSkillEndpoints.test_create_skill_all_categories _____________
+tests\test_skill_api.py:71: in test_create_skill_all_categories
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_____________ TestSkillEndpoints.test_create_skill_invalid_level ______________
+tests\test_skill_api.py:85: in test_create_skill_invalid_level
+    assert response.status_code in [400, 422]
+E   assert 404 in [400, 422]
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestSkillEndpoints.test_create_skill_without_auth ______________
+tests\test_skill_api.py:102: in test_create_skill_without_auth
+    assert response.status_code == 401
+E   assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________ TestSkillEndpoints.test_create_skill_missing_required_fields _________
+tests\test_skill_api.py:114: in test_create_skill_missing_required_fields
+    assert response.status_code == 422
+E   assert 404 == 422
+E    +  where 404 = <Response [404 Not Found]>.status_code
+___________ TestSkillEndpoints.test_list_skills_grouped_by_category ___________
+tests\test_skill_api.py:135: in test_list_skills_grouped_by_category
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________________ TestSkillEndpoints.test_update_skill_success _________________
+tests\test_skill_api.py:165: in test_update_skill_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+____________ TestSkillEndpoints.test_update_skill_change_category _____________
+tests\test_skill_api.py:186: in test_update_skill_change_category
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestSkillEndpoints.test_update_skill_without_auth ______________
+tests\test_skill_api.py:215: in test_update_skill_without_auth
+    assert response.status_code == 401
+E   assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+________________ TestSkillEndpoints.test_delete_skill_success _________________
+tests\test_skill_api.py:231: in test_delete_skill_success
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+______________ TestSkillEndpoints.test_delete_skill_without_auth ______________
+tests\test_skill_api.py:263: in test_delete_skill_without_auth
+    assert response.status_code == 401
+E   assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_______________ TestSkillEndpoints.test_skills_ordered_by_level _______________
+tests\test_skill_api.py:281: in test_skills_ordered_by_level
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+============================== warnings summary ===============================
+C:\Users\PC\anaconda\lib\site-packages\pydantic\_internal\_config.py:268: 11 warnings
+  C:\Users\PC\anaconda\lib\site-packages\pydantic\_internal\_config.py:268: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+app\database.py:19
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\database.py:19: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+tests/test_auth.py::TestProtectedEndpoints::test_protected_endpoint_with_auth
+tests/test_education_api.py::TestEducationEndpoints::test_create_education
+tests/test_education_api.py::TestEducationEndpoints::test_create_education_minimal
+tests/test_education_api.py::TestEducationEndpoints::test_list_education_after_create
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\education.py:76: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    education = Education(**education_data.dict())
+
+tests/test_auth.py: 1 warning
+tests/test_education_api.py: 4 warnings
+tests/test_experience_api.py: 3 warnings
+tests/test_extracurricular_api.py: 5 warnings
+tests/test_personal_api.py: 3 warnings
+  C:\Users\PC\anaconda\lib\site-packages\pydantic\main.py:979: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    warnings.warn('The `dict` method is deprecated; use `model_dump` instead.', DeprecationWarning)
+
+tests/test_auth.py::TestProtectedEndpoints::test_protected_endpoint_with_auth
+tests/test_education_api.py::TestEducationEndpoints::test_create_education
+tests/test_education_api.py::TestEducationEndpoints::test_create_education_minimal
+tests/test_education_api.py::TestEducationEndpoints::test_list_education_after_create
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\education.py:84: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=EducationResponse.from_orm(education)
+
+tests/test_auth.py: 1 warning
+tests/test_education_api.py: 5 warnings
+tests/test_experience_api.py: 6 warnings
+tests/test_extracurricular_api.py: 8 warnings
+tests/test_personal_api.py: 4 warnings
+  C:\Users\PC\anaconda\lib\site-packages\pydantic\main.py:1120: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config["from_attributes"]=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    warnings.warn(
+
+tests/test_education_api.py::TestEducationEndpoints::test_update_education
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\education.py:107: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    update_data = updates.dict(exclude_unset=True)
+
+tests/test_education_api.py::TestEducationEndpoints::test_update_education
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\education.py:117: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=EducationResponse.from_orm(education)
+
+tests/test_education_api.py::TestEducationEndpoints::test_list_education_after_create
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\education.py:65: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=[EducationResponse.from_orm(edu) for edu in education_list]
+
+tests/test_experience_api.py::TestExperienceEndpoints::test_create_experience_success
+tests/test_experience_api.py::TestExperienceEndpoints::test_create_experience_current_position
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\experience.py:73: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    experience = Experience(**experience_data.dict())
+
+tests/test_experience_api.py::TestExperienceEndpoints::test_create_experience_success
+tests/test_experience_api.py::TestExperienceEndpoints::test_create_experience_current_position
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\experience.py:81: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=ExperienceResponse.from_orm(experience)
+
+tests/test_experience_api.py::TestExperienceEndpoints::test_list_experiences_multiple
+tests/test_experience_api.py::TestExperienceEndpoints::test_list_experiences_multiple
+tests/test_experience_api.py::TestExperienceEndpoints::test_list_experiences_multiple
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\experience.py:62: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=[ExperienceResponse.from_orm(exp) for exp in experience_list]
+
+tests/test_experience_api.py::TestExperienceEndpoints::test_update_experience_success
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\experience.py:104: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    update_data = updates.dict(exclude_unset=True)
+
+tests/test_experience_api.py::TestExperienceEndpoints::test_update_experience_success
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\experience.py:114: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=ExperienceResponse.from_orm(experience)
+
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_success
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_minimal
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_ongoing
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_extracurricular_with_external_url
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\extracurricular.py:70: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    activity = Extracurricular(**activity_data.dict())
+
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_success
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_minimal
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_ongoing
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_extracurricular_with_external_url
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\extracurricular.py:78: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=ExtracurricularResponse.from_orm(activity)
+
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_list_extracurriculars_multiple
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_list_extracurriculars_multiple
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_list_extracurriculars_multiple
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\extracurricular.py:59: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=[ExtracurricularResponse.from_orm(activity) for activity in activities]
+
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_update_extracurricular_success
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\extracurricular.py:101: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    update_data = updates.dict(exclude_unset=True)
+
+tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_update_extracurricular_success
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\extracurricular.py:111: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=ExtracurricularResponse.from_orm(activity)
+
+tests/test_personal_api.py::TestPersonalEndpoints::test_get_personal_info_with_data
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\personal.py:58: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=PersonalResponse.from_orm(personal)
+
+tests/test_personal_api.py::TestPersonalEndpoints::test_update_personal_info
+tests/test_personal_api.py::TestPersonalEndpoints::test_update_personal_partial
+tests/test_personal_api.py::TestPersonalInfoValidation::test_update_with_valid_urls
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\personal.py:77: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    update_data = updates.dict(exclude_unset=True)
+
+tests/test_personal_api.py::TestPersonalEndpoints::test_update_personal_info
+tests/test_personal_api.py::TestPersonalEndpoints::test_update_personal_partial
+tests/test_personal_api.py::TestPersonalInfoValidation::test_update_with_valid_urls
+  D:\Portfolio_Fastapi_antigravity_fully_dynamic\backend\app\api\v1\personal.py:87: PydanticDeprecatedSince20: The `from_orm` method is deprecated; set `model_config['from_attributes']=True` and use `model_validate` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    data=PersonalResponse.from_orm(personal)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_list_articles_empty
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_create_article_success
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_create_featured_article
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_create_article_duplicate_slug
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_create_article_without_auth
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_create_article_missing_required_fields
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_get_article_by_slug
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_list_articles_multiple
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_list_featured_articles_only
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_update_article_success
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_update_article_toggle_featured
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_delete_article_success
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_upload_cover_image
+FAILED tests/test_article_api.py::TestArticleEndpoints::test_upload_pdf_attachment
+FAILED tests/test_auth.py::TestProtectedEndpoints::test_protected_endpoint_without_auth
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_list_certifications_empty
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_create_certification_success
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_create_certification_minimal
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_create_certification_without_auth
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_create_certification_missing_required_fields
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_list_certifications_multiple
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_update_certification_success
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_update_certification_without_auth
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_delete_certification_success
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_delete_certification_without_auth
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_upload_certificate_image
+FAILED tests/test_certification_api.py::TestCertificationEndpoints::test_certification_date_format
+FAILED tests/test_education_api.py::TestEducationEndpoints::test_create_education_unauthorized
+FAILED tests/test_experience_api.py::TestExperienceEndpoints::test_create_experience_without_auth
+FAILED tests/test_experience_api.py::TestExperienceEndpoints::test_update_experience_without_auth
+FAILED tests/test_experience_api.py::TestExperienceEndpoints::test_delete_experience_without_auth
+FAILED tests/test_experience_api.py::TestExperienceEndpoints::test_upload_logo_success
+FAILED tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_create_extracurricular_without_auth
+FAILED tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_update_extracurricular_without_auth
+FAILED tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_delete_extracurricular_without_auth
+FAILED tests/test_extracurricular_api.py::TestExtracurricularEndpoints::test_upload_certificate_image
+FAILED tests/test_personal_api.py::TestPersonalEndpoints::test_update_personal_info
+FAILED tests/test_personal_api.py::TestPersonalEndpoints::test_update_personal_info_unauthorized
+FAILED tests/test_personal_api.py::TestPersonalInfoValidation::test_update_with_valid_urls
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_list_projects_empty
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_create_project_success
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_create_project_minimal
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_create_project_duplicate_slug
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_create_project_without_auth
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_create_project_missing_required_fields
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_get_project_by_slug
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_list_projects_multiple
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_update_project_success
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_update_project_slug
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_delete_project_success
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_upload_cover_image_success
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_upload_project_images
+FAILED tests/test_project_api.py::TestProjectEndpoints::test_project_with_images_array
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_list_resource_papers_empty
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_resource_paper_success
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_featured_resource_paper
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_resource_paper_duplicate_slug
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_resource_paper_without_auth
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_create_resource_paper_missing_required_fields
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_get_resource_paper_by_slug
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_list_resource_papers_multiple
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_list_featured_resource_papers
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_update_resource_paper_success
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_update_resource_paper_toggle_featured
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_delete_resource_paper_success
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_upload_cover_image
+FAILED tests/test_resource_paper_api.py::TestResourcePaperEndpoints::test_upload_pdf_attachment
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_list_skills_empty - ...
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_success
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_all_categories
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_invalid_level
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_without_auth
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_create_skill_missing_required_fields
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_list_skills_grouped_by_category
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_update_skill_success
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_update_skill_change_category
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_update_skill_without_auth
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_delete_skill_success
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_delete_skill_without_auth
+FAILED tests/test_skill_api.py::TestSkillEndpoints::test_skills_ordered_by_level
+================= 80 failed, 60 passed, 92 warnings in 24.95s =================

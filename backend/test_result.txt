@@ -1,0 +1,93 @@
+﻿=== LOGGING IN ===
+Login Status: 200
+Token obtained: eyJhbGciOiJIUzI1NiIsInR5cCI6Ik...
+
+=== TEST 1: Update Personal Info ===
+Status: 500
+python : Traceback 
+(most recent call 
+last):
+At line:1 char:30
++ .\venv\Scripts\Acti
+vate.ps1; python 
+test_endpoints.py 
+2>&1 | Out-File ...
++                    
+          ~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Traceba   
+ ck (most recent     
+call last)::Stri    
+ng) [], RemoteEx    
+ception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  File "D:\Portfolio_
+Fastapi_antigravity_f
+ully_dynamic\backend\
+venv\lib\site-package
+s\requests\models.py"
+, line 976, in json
+    return complexjso
+n.loads(self.text, 
+**kwargs)
+  File "C:\Users\PC\a
+naconda\lib\json\__in
+it__.py", line 346, 
+in loads
+    return _default_d
+ecoder.decode(s)
+  File "C:\Users\PC\a
+naconda\lib\json\deco
+der.py", line 337, 
+in decode
+    obj, end = 
+self.raw_decode(s, 
+idx=_w(s, 0).end())
+  File "C:\Users\PC\a
+naconda\lib\json\deco
+der.py", line 355, 
+in raw_decode
+    raise JSONDecodeE
+rror("Expecting 
+value", s, 
+err.value) from None
+json.decoder.JSONDeco
+deError: Expecting 
+value: line 1 column 
+1 (char 0)
+
+During handling of 
+the above exception, 
+another exception 
+occurred:
+
+Traceback (most 
+recent call last):
+  File "D:\Portfolio_
+Fastapi_antigravity_f
+ully_dynamic\backend\
+test_endpoints.py", 
+line 28, in <module>
+    
+print(f"Response: {js
+on.dumps(response.jso
+n(), indent=2)}")
+  File "D:\Portfolio_
+Fastapi_antigravity_f
+ully_dynamic\backend\
+venv\lib\site-package
+s\requests\models.py"
+, line 980, in json
+    raise RequestsJSO
+NDecodeError(e.msg, 
+e.doc, e.pos)
+requests.exceptions.J
+SONDecodeError: 
+Expecting value: 
+line 1 column 1 
+(char 0)

@@ -1,0 +1,58 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python caches and tooling artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+backend/.venv/
+backend/venv/
+
+# Node and frontend build artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+!.env.production.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+!backend/.env.production.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+!frontend/.env.production.example
+
+# Databases and runtime uploads
+*.db
+*.db-journal
+uploads/
+backend/uploads/
+
+# Generic logs and temp files
+*.log
+*.tmp
