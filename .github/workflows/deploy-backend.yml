@@ -1,0 +1,53 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/**"
+      - ".github/workflows/deploy-backend.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Install backend dependencies
+        run: pip install -r backend/requirements.txt
+
+      - name: Validate backend syntax
+        run: python -m compileall backend/app
+
+      - name: Trigger backend deploy hook
+        env:
+          BACKEND_DEPLOY_HOOK_URL: ${{ secrets.BACKEND_DEPLOY_HOOK_URL }}
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          HOOK_URL="$BACKEND_DEPLOY_HOOK_URL"
+          if [ -z "$HOOK_URL" ]; then
+            HOOK_URL="$RENDER_DEPLOY_HOOK_URL"
+          fi
+
+          if [ -z "$HOOK_URL" ]; then
+            echo "Missing deploy hook secret."
+            echo "Set BACKEND_DEPLOY_HOOK_URL (recommended) or RENDER_DEPLOY_HOOK_URL in GitHub repo secrets."
+            exit 1
+          fi
+
+          curl --fail --silent --show-error --request POST "$HOOK_URL"
+          echo "Backend deploy triggered successfully."

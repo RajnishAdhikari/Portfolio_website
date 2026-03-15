@@ -139,3 +139,20 @@ python -m compileall backend/app
 cd frontend
 npm run build
 ```
+
+## 9. CI/CD (GitHub Actions)
+
+- Frontend auto-deploys to GitHub Pages on push to `main` when files in `frontend/**` change.
+- Backend auto-validates and triggers deploy on push to `main` when files in `backend/**` change.
+
+### Required GitHub repository configuration
+
+1. Enable GitHub Pages source:
+   - `Settings -> Pages -> Source: GitHub Actions`
+2. Add repository variable:
+   - `Settings -> Secrets and variables -> Actions -> Variables`
+   - `VITE_API_BASE_URL=https://your-backend-domain`
+3. Add repository secret for backend deploy hook:
+   - `Settings -> Secrets and variables -> Actions -> Secrets`
+   - `BACKEND_DEPLOY_HOOK_URL=<your-backend-provider-deploy-hook>`
+   - For Render, you can use `RENDER_DEPLOY_HOOK_URL` instead.
