@@ -32,8 +32,8 @@ upload_dir = settings.upload_dir
 os.makedirs(upload_dir, exist_ok=True)
 app.mount("/uploads", StaticFiles(directory=upload_dir), name="uploads")
 
-# Auto-create tables in dev only
-if is_dev:
+# Auto-create tables in dev or when explicitly enabled for first-time deploys
+if is_dev or settings.auto_create_tables:
     Base.metadata.create_all(bind=engine)
 
 

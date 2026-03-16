@@ -122,6 +122,9 @@ class Settings(BaseSettings):
     
     rate_limit_per_minute: int = 100
     """Maximum API requests per minute per IP (default: 100)"""
+
+    auto_create_tables: bool = False
+    """Create missing database tables on startup when enabled"""
     
     # ========================================================================
     # SERVER CONFIGURATION
