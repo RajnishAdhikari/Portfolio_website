@@ -9,6 +9,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app ./app
+COPY create_admin.py ./create_admin.py
 RUN mkdir -p uploads
 
 EXPOSE 8000

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = ({ personalInfo }) => {
     const currentYear = new Date().getFullYear();
@@ -59,9 +60,9 @@ const Footer = ({ personalInfo }) => {
                             <a href="#projects" className="block text-slate-400 hover:text-white transition-colors">
                                 Projects
                             </a>
-                            <a href="/admin/login" className="block text-slate-400 hover:text-white transition-colors">
+                            <Link to="/admin/login" className="block text-slate-400 hover:text-white transition-colors">
                                 Admin Login
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

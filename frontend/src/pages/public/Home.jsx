@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Loader2, AlertCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import publicApi from '../../services/publicApi';
 import Hero from '../../components/public/Hero';
 import EducationSection from '../../components/public/EducationSection';
@@ -135,12 +136,12 @@ const Home = () => {
                     <p className="text-slate-600 dark:text-slate-400 mb-4">
                         Admin? Login to add content.
                     </p>
-                    <a
-                        href="/admin/login"
+                    <Link
+                        to="/admin/login"
                         className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold shadow-lg hover:shadow-xl"
                     >
                         Go to Admin Dashboard
-                    </a>
+                    </Link>
                 </div>
             </div>
         );
