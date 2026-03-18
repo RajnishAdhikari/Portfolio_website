@@ -9,12 +9,14 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
     const { login } = useAuth();
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
+        setErrorMessage('');
 
         try {
             const response = await axios.post(ENDPOINTS.LOGIN, { email, password });
@@ -22,9 +24,19 @@ const Login = () => {
             if (response.data.access_token) {
                 login(response.data.access_token, response.data.user || { email });
                 toast.success('Login successful!');
-                navigate('/admin');
+                navigate('/admin/personal', { replace: true });
+            } else {
+                const msg = 'Login failed: access token missing in response.';
+                setErrorMessage(msg);
+                toast.error(msg);
             }
         } catch (error) {
+            const msg =
+                error.response?.data?.message ||
+                error.response?.data?.detail ||
+                'Login failed. Please verify your email and password.';
+            setErrorMessage(msg);
+            toast.error(msg);
             console.error('Login error:', error);
         } finally {
             setIsLoading(false);
@@ -77,6 +89,9 @@ const Login = () => {
                         {isLoading ? <span className="spinner"></span> : 'Login'}
                     </button>
                 </form>
+                {errorMessage && (
+                    <p className="text-center text-sm text-red-500 mt-4">{errorMessage}</p>
+                )}
 
                 <p className="text-center text-sm text-slate-600 dark:text-slate-400 mt-6">
                     Note: You need to create an admin account via API first
