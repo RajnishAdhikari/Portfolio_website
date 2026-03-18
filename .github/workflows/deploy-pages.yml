@@ -54,9 +54,6 @@ jobs:
         working-directory: frontend
         run: npm run build -- --base "$VITE_BASE_PATH"
 
-      - name: Add SPA fallback
-        run: cp frontend/dist/index.html frontend/dist/404.html
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
