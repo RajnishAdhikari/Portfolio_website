@@ -23,6 +23,9 @@ Environment Variables (.env file):
     MAX_PDF_SIZE_MB: Maximum PDF upload size in MB
     UPLOAD_DIR: Directory for file uploads
     RATE_LIMIT_PER_MINUTE: API rate limit per minute
+    BOOTSTRAP_ADMIN_EMAIL: Optional admin email to create at startup
+    BOOTSTRAP_ADMIN_PASSWORD: Optional admin password to create/reset at startup
+    BOOTSTRAP_ADMIN_FORCE_RESET: Reset bootstrap admin password on each startup
     HOST: Server host address
     PORT: Server port number
 
@@ -125,6 +128,15 @@ class Settings(BaseSettings):
 
     auto_create_tables: bool = False
     """Create missing database tables on startup when enabled"""
+
+    bootstrap_admin_email: str = ""
+    """Admin email to bootstrap on startup (optional)"""
+
+    bootstrap_admin_password: str = ""
+    """Admin password to bootstrap on startup (optional)"""
+
+    bootstrap_admin_force_reset: bool = False
+    """Reset bootstrap admin password on startup when user already exists"""
     
     # ========================================================================
     # SERVER CONFIGURATION
