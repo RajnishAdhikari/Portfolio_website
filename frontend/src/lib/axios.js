@@ -4,6 +4,11 @@ import { API_BASE_URL } from '@/config/api';
 
 const LOGIN_PATH = `${import.meta.env.BASE_URL}admin/login`;
 
+const isAuthEndpoint = (url = '') =>
+    url.includes('/api/v1/auth/login') ||
+    url.includes('/api/v1/auth/refresh') ||
+    url.includes('/api/v1/auth/logout');
+
 // Use env-configured API URL in production, and localhost URL in dev via .env
 const axiosInstance = axios.create({
     baseURL: API_BASE_URL || '',
@@ -40,7 +45,11 @@ axiosInstance.interceptors.response.use(
         const originalRequest = error.config;
 
         // If 401 and not already retried, try to refresh token
-        if (error.response?.status === 401 && !originalRequest._retry) {
+        if (
+            error.response?.status === 401 &&
+            !originalRequest?._retry &&
+            !isAuthEndpoint(originalRequest?.url || '')
+        ) {
             originalRequest._retry = true;
 
             try {
@@ -62,7 +71,9 @@ axiosInstance.interceptors.response.use(
             } catch (refreshError) {
                 // Refresh failed, logout user
                 localStorage.removeItem('access_token');
-                window.location.href = LOGIN_PATH;
+                if (!window.location.pathname.includes('/admin/login')) {
+                    window.location.href = LOGIN_PATH;
+                }
                 return Promise.reject(refreshError);
             }
         }

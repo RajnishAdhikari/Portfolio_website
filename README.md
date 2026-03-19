@@ -156,3 +156,11 @@ npm run build
    - `Settings -> Secrets and variables -> Actions -> Secrets`
    - `BACKEND_DEPLOY_HOOK_URL=<your-backend-provider-deploy-hook>`
    - For Render, you can use `RENDER_DEPLOY_HOOK_URL` instead.
+
+
+
+
+
+
+
+then login with admin@example.com / R@dmin12##
