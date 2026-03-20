@@ -118,6 +118,19 @@ class Settings(BaseSettings):
     
     upload_dir: str = "uploads"
     """Directory path for storing uploaded files (default: "uploads")"""
+
+    # ========================================================================
+    # CLOUDINARY CONFIGURATION
+    # ========================================================================
+    
+    cloudinary_cloud_name: str = ""
+    """Cloudinary cloud name for file storage"""
+    
+    cloudinary_api_key: str = ""
+    """Cloudinary API key"""
+    
+    cloudinary_api_secret: str = ""
+    """Cloudinary API secret"""
     
     # ========================================================================
     # RATE LIMITING CONFIGURATION
