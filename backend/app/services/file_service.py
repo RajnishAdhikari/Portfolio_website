@@ -83,7 +83,8 @@ async def save_upload_file(
             result = cloudinary.uploader.upload(
                 BytesIO(content),
                 public_id=f"portfolio/pdfs/{unique_id}",
-                resource_type="raw"
+                resource_type="raw",
+                access_mode="public"
             )
     except Exception as e:
         raise HTTPException(
