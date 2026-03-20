@@ -84,7 +84,10 @@ async def save_upload_file(
                 BytesIO(content),
                 public_id=f"portfolio/pdfs/{unique_id}",
                 resource_type="raw",
-                format="pdf"
+                format="pdf",
+                flags="attachment",
+                use_filename=True
+                unique_filename=False
             )
     except Exception as e:
         raise HTTPException(
